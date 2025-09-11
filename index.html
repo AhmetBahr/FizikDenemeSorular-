@@ -1,44 +1,109 @@
 <!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dikran Kılıç — Ana Sayfa</title>
-  <meta name="description" content="Dikran Kılıç'ın resmi web sitesi. Uygulamalar ve oyunlar için destek, gizlilik politikası ve iletişim.">
-  <link rel="icon" href="/favicon.ico">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deneme Çözümleri – Resmî Ana Sayfa</title>
+  <meta name="description" content="Deneme Çözümleri; öğrencilerin deneme soru çözümlerine PDF olarak kolayca erişmesini sağlayan, sınav hazırlığını hızlandıran bir mobil uygulamadır." />
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Deneme Çözümleri – Resmî Ana Sayfa" />
+  <meta property="og:description" content="Öğrenciler için deneme çözümlerine hızlı ve düzenli erişim. Gizlilik politikası, kullanım şartları ve destek bilgileri burada." />
+  <meta property="og:url" content="https://SENIN-ALAN-ADIN.com/" />
+  <meta property="og:image" content="https://SENIN-ALAN-ADIN.com/og-image.jpg" />
+
+  <!-- Minimal styles -->
   <style>
-    :root{--bg:#0f172a;--fg:#e2e8f0;--accent:#38bdf8;--muted:#94a3b8;}
+    :root{
+      --bg:#0f172a; --panel:#0b1324; --text:#e5e7eb; --muted:#94a3b8; --line:#1f2937; --brand:#38bdf8;
+    }
+    *{box-sizing:border-box}
     html,body{height:100%;margin:0}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;background:var(--bg);color:var(--fg);display:flex;align-items:center;justify-content:center}
-    .card{max-width:760px;padding:40px;border:1px solid #1f2937;border-radius:16px;background:#0b1324aa;backdrop-filter:saturate(120%) blur(6px);box-shadow:0 8px 30px rgba(0,0,0,.35)}
-    h1{font-size:32px;margin:0 0 10px}
-    p{line-height:1.6;color:var(--fg)}
-    a{color:var(--accent);text-decoration:none}
-    nav{margin-top:18px}
-    nav a{margin-right:16px}
-    .muted{color:var(--muted);font-size:14px}
-    .apps{margin-top:18px;padding-left:18px}
-    .apps li{margin:6px 0}
+    body{
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
+      background: var(--bg); color: var(--text);
+      display:flex; align-items:center; justify-content:center; padding:24px;
+    }
+    main{
+      width:min(920px,100%); background:color-mix(in oklab, var(--panel) 92%, black 8%);
+      border:1px solid var(--line); border-radius:16px; padding:36px 32px; 
+      box-shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    h1{margin:0 0 8px; font-size:32px}
+    h2{margin:24px 0 8px; font-size:20px}
+    p{line-height:1.7; margin:8px 0}
+    ul{margin:8px 0 0 20px}
+    a{color:var(--brand); text-decoration:none}
+    .row{display:grid; grid-template-columns:1fr; gap:16px}
+    .badge{display:inline-block; padding:4px 10px; border:1px solid var(--line); border-radius:999px; font-size:12px; color:var(--muted)}
+    .muted{color:var(--muted)}
+    .footer{margin-top:24px; display:flex; gap:16px; flex-wrap:wrap}
+    .sep{opacity:.3}
+    @media (min-width:800px){ .row{grid-template-columns:1.1fr .9fr} }
   </style>
 </head>
 <body>
-  <main class="card">
-    <h1>Fizik Soru Çözümleri</h1>
-    <p>Merhaba! Bu alan <strong>uygulamalarım</strong> için resmi ana sayfamdır.
-       Google doğrulamaları için bu alan kullanılmaktadır.</p>
-    <nav>
-      <a href="/privacy.html">Gizlilik Politikası</a>
-      <a href="/terms.html">Kullanım Şartları</a>
-      <a href="mailto:fizikdenemecozumleri@gmail.com">İletişim</a>
-    </nav>
-    <!-- <section>
-      <h2>Uygulamalar</h2>
-      <ul class="apps">
-        <li>Örnek Uygulama — <span class="muted">Google Play bağlantısı buraya gelecek</span></li>
-      </ul> -->
-    </section> 
-    <p class="muted">© <span id="y"></span> Vakvak Studios</p>
+  <main role="main" aria-labelledby="app-title">
+    <span class="badge">Resmî Uygulama Ana Sayfası</span>
+    <h1 id="app-title">Deneme Çözümleri</h1>
+    <p>
+      Deneme Çözümleri, öğrencilerin <strong>hocamızın çözümlerine PDF formatında</strong> erişmesini kolaylaştırmak için geliştirilmiş bir mobil uygulamadır.
+      Uygulama; çözümleri telefonunuzdan istediğiniz an açmanızı sağlar, çalışırken zaman kaybetmenizi önler.
+    </p>
+
+    <div class="row">
+      <section aria-labelledby="purpose">
+        <h2 id="purpose">Uygulamanın Amacı & Özellikler</h2>
+        <ul>
+          <li>Deneme soru çözümlerini tek yerde, kategorilere ayrılmış şekilde görme</li>
+          <li>PDF dosyalarını hızlı görüntüleme ve yakınlaştırma</li>
+          <li>Kullanıcı dostu arayüz ile zamandan tasarruf</li>
+        </ul>
+        <p class="muted">Hedefimiz; konuların daha iyi anlaşılması, eksiklerin tespiti ve sınavlara bilinçli hazırlık yapılmasıdır.</p>
+      </section>
+
+      <section aria-labelledby="data">
+        <h2 id="data">Kullandığımız Google İzinleri & Veri</h2>
+        <p>Uygulamanın çalışması için aşağıdaki (asgari) izinler kullanılmaktadır:</p>
+        <ul>
+          <li><strong>Google ile Giriş</strong> – <em>email, profile</em> temel kimlik bilgileri (kullanıcı hesabı oluşturma ve destek iletişimi için).</li>
+          <!-- Eğer Drive veya başka scope'lar varsa bunları EKLE ve kısa amaç yaz -->
+          <!-- <li><strong>Google Drive read-only</strong> – Yalnızca uygulama içeriği olan PDF'leri listelemek ve göstermek için.</li> -->
+        </ul>
+        <p class="muted">Kişisel veriler reklam amaçlı satılmaz/aktarılmaz. Detaylar için <a href="/privacy.html">Gizlilik Politikası</a>’nı inceleyin.</p>
+      </section>
+    </div>
+
+    <section aria-labelledby="who">
+      <h2 id="who">Kimler Kullanabilir?</h2>
+      <p>Uygulama, deneme çözümlerine erişmek isteyen öğrenciler içindir. Giriş gereklidir. Kayıt talepleri için lütfen iletişime geçin.</p>
+    </section>
+
+    <section aria-labelledby="branding">
+      <h2 id="branding">Uygulama Kimliği</h2>
+      <p>Uygulama adı: <strong>Deneme Çözümleri</strong> (paket/ad: <strong>fizikdenemesorulari</strong>). Bu alan adı uygulamanın geliştiricisi <strong>Vakvak Studios</strong>’a aittir ve OAuth doğrulamalarında resmî olarak kullanılmaktadır.</p>
+    </section>
+
+    <section aria-labelledby="links">
+      <h2 id="links">Bağlantılar</h2>
+      <p>
+        <a href="/privacy.html">Gizlilik Politikası</a> ·
+        <a href="/terms.html">Kullanım Şartları</a> ·
+        <a href="mailto:fizikdenemecozumleri@gmail.com">İletişim / Destek</a>
+        <!-- Varsa mağaza linklerini ekle -->
+        <!-- · <a href="https://play.google.com/store/apps/details?id=PAKET_ADI">Google Play</a> -->
+      </p>
+    </section>
+
+    <div class="footer">
+      <span class="muted">© <span id="y"></span> Vakvak Studios</span>
+      <span class="sep">|</span>
+      <span class="muted">Sürüm: 1.0</span>
+    </div>
   </main>
-  <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
